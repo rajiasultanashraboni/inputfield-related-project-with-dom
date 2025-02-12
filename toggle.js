@@ -27,6 +27,9 @@ document.getElementById('assistant-tab')
     const expenseForm = document.getElementById('expense-form');
     expenseForm.classList.remove('hidden');
 
+    const historySection = document.getElementById('history-section');
+    historySection.classList.add('hidden')
+
     
 
 

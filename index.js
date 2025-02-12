@@ -7,6 +7,12 @@ document.getElementById('calculate')
     const courses = inputFieldValueById('courses');
     const internet = inputFieldValueById('internet');
 
+    // validation 
+    if(income<=0 || isNaN(income)){
+        document.getElementById('income-error').classList.remove('hidden');
+        return;
+    }
+
     // console.table({income,software,courses,internet})
 
     const totalExpenses = software+courses+internet;
@@ -53,6 +59,9 @@ document.getElementById('calculate-savings').addEventListener('click',function()
     const software = inputFieldValueById('software');
     const courses = inputFieldValueById('courses');
     const internet = inputFieldValueById('internet');
+
+    
+    // calculation is here 
     const totalExpenses = software+courses+internet;
     const balance = income-totalExpenses;
     
