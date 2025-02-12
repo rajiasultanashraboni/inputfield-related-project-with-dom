@@ -12,6 +12,10 @@ document.getElementById('calculate')
         document.getElementById('income-error').classList.remove('hidden');
         return;
     }
+    if(software<=0 || isNaN(software)){
+        document.getElementById('software-error').classList.remove('hidden');
+        return;
+    }
 
     // console.table({income,software,courses,internet})
 
@@ -82,5 +86,17 @@ document.getElementById('calculate-savings').addEventListener('click',function()
     document.getElementById('remaining-balance').innerText = remainingAmount
 
 
+
+});
+
+// live validation for input 
+
+document.getElementById('income').addEventListener('input',function(){
+    const inputValue = document.getElementById('income').value;
+
+    if(inputValue<=0 || isNaN(inputValue)){
+        document.getElementById('income-error').classList.remove('hidden');
+        return;
+    }
 
 })
